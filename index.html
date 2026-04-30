@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capital Concreto · Mutirão de Contratação Comercial · 18 de Maio</title>
+<meta name="description" content="Plano de recrutamento da operação comercial Capital Concreto/CAPTO. 20 Consultores, 2 Coordenadores e 1 Auxiliar de RH. D-Day 18/05/2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0a0a;
+    --bg-2: #111111;
+    --bg-3: #1a1a1a;
+    --line: #2a2a2a;
+    --text: #ffffff;
+    --text-2: #b8b8b8;
+    --text-3: #6b6b6b;
+    --accent: #ef4f00;
+    --accent-2: #f15a24;
+    --accent-dim: #b43b00;
+    --gold: #d4a85a;
+    --green: #4ade80;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  ::selection { background: var(--accent); color: #fff; }
+  a { color: var(--accent); text-decoration: none; }
+  .container { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+  .small { font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-3); font-weight: 500; }
+
+  /* Topbar */
+  .topbar {
+    border-bottom: 1px solid var(--line);
+    padding: 14px 0;
+    background: rgba(10,10,10,0.8);
+    backdrop-filter: blur(8px);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+  }
+  .topbar-row {
+    display: flex; justify-content: space-between; align-items: center;
+    gap: 16px; flex-wrap: wrap;
+  }
+  .brand {
+    display: flex; align-items: center; gap: 12px; font-weight: 700; letter-spacing: 0.04em;
+  }
+  .brand-mark {
+    width: 32px; height: 32px; background: var(--accent);
+    display: flex; align-items: center; justify-content: center; font-weight: 900;
+    color: #000; border-radius: 4px;
+  }
+  .brand-name { font-size: 14px; }
+  .brand-name span { color: var(--text-3); font-weight: 400; }
+
+  /* Hero */
+  .hero {
+    padding: 90px 0 70px;
+    background: radial-gradient(ellipse at 30% 0%, rgba(239,79,0,0.16) 0%, transparent 60%);
+    border-bottom: 1px solid var(--line);
+  }
+  .hero-tag {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(239,79,0,0.12); border: 1px solid rgba(239,79,0,0.3);
+    padding: 8px 14px; border-radius: 100px; font-size: 12px; font-weight: 600;
+    letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent);
+    margin-bottom: 28px;
+  }
+  .hero-tag::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); animation: pulse 2s ease-in-out infinite; }
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+  h1 {
+    font-family: 'Playfair Display', serif; font-weight: 900;
+    font-size: clamp(40px, 6vw, 76px); line-height: 1.05; letter-spacing: -0.02em;
+    margin-bottom: 24px;
+  }
+  h1 em { color: var(--accent); font-style: normal; }
+  .hero-sub {
+    font-size: clamp(17px, 1.8vw, 20px); color: var(--text-2); max-width: 720px; line-height: 1.55;
+    margin-bottom: 40px;
+  }
+  .hero-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
+    background: var(--line); border: 1px solid var(--line);
+    margin-top: 56px;
+  }
+  .hero-stat {
+    background: var(--bg); padding: 26px 22px;
+  }
+  .hero-stat .small { margin-bottom: 8px; }
+  .hero-stat .num {
+    font-family: 'Playfair Display', serif; font-size: 38px; font-weight: 900;
+    color: var(--accent); line-height: 1;
+  }
+  .hero-stat .label { font-size: 13px; color: var(--text-2); margin-top: 6px; }
+  @media (max-width: 768px) {
+    .hero-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  /* Section */
+  section { padding: 90px 0; border-bottom: 1px solid var(--line); }
+  .section-head { margin-bottom: 56px; max-width: 800px; }
+  .section-head .small { color: var(--accent); margin-bottom: 14px; }
+  .section-head h2 {
+    font-family: 'Playfair Display', serif; font-size: clamp(32px, 4vw, 50px);
+    font-weight: 900; line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 16px;
+  }
+  .section-head p { color: var(--text-2); font-size: 17px; max-width: 700px; }
+
+  /* Vaga Card */
+  .vaga {
+    border: 1px solid var(--line); background: var(--bg-2);
+    margin-bottom: 24px; overflow: hidden;
+    transition: border-color 0.2s;
+  }
+  .vaga:hover { border-color: var(--accent-dim); }
+  .vaga-head {
+    display: flex; gap: 24px; align-items: stretch;
+    border-bottom: 1px solid var(--line);
+  }
+  .vaga-num {
+    background: var(--accent); color: #000; padding: 30px 24px;
+    font-family: 'Playfair Display', serif; font-size: 42px; font-weight: 900;
+    display: flex; align-items: center; justify-content: center; min-width: 100px;
+  }
+  .vaga-title {
+    padding: 24px 28px 24px 0; flex: 1;
+  }
+  .vaga-title .small { color: var(--accent); margin-bottom: 6px; }
+  .vaga-title h3 {
+    font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 700;
+    line-height: 1.1; margin-bottom: 6px;
+  }
+  .vaga-vacancies { font-size: 14px; color: var(--text-2); }
+  .vaga-vacancies strong { color: var(--text); font-weight: 700; }
+  .vaga-body {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
+    background: var(--line);
+  }
+  .vaga-block { background: var(--bg-2); padding: 28px; }
+  .vaga-block h4 {
+    font-size: 12px; font-weight: 700; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--text-3); margin-bottom: 16px;
+    padding-bottom: 14px; border-bottom: 1px solid var(--line);
+  }
+  .vaga-block ul { list-style: none; }
+  .vaga-block li {
+    position: relative; padding-left: 22px; margin-bottom: 10px;
+    font-size: 15px; color: var(--text); line-height: 1.55;
+  }
+  .vaga-block li::before {
+    content: ''; position: absolute; left: 0; top: 9px;
+    width: 8px; height: 1px; background: var(--accent);
+  }
+  .vaga-remun {
+    background: var(--bg-3); border-top: 1px solid var(--line);
+    padding: 24px 28px;
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
+    background: var(--line);
+  }
+  .remun-cell { background: var(--bg-3); padding: 18px 22px; }
+  .remun-cell .small { margin-bottom: 6px; }
+  .remun-cell .v {
+    font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700;
+    color: var(--accent);
+  }
+  .remun-cell .d { font-size: 12px; color: var(--text-2); margin-top: 2px; }
+  @media (max-width: 768px) {
+    .vaga-head { flex-direction: column; }
+    .vaga-num { padding: 20px; min-width: auto; font-size: 32px; }
+    .vaga-title { padding: 20px; }
+    .vaga-body { grid-template-columns: 1fr; }
+    .vaga-remun { grid-template-columns: 1fr; }
+  }
+
+  /* Perfil comportamental */
+  .perfil-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
+    margin-top: 32px;
+  }
+  .perfil-card {
+    border: 1px solid var(--line); background: var(--bg-2);
+    padding: 28px 24px;
+    transition: transform 0.2s, border-color 0.2s;
+  }
+  .perfil-card:hover { transform: translateY(-3px); border-color: var(--accent); }
+  .perfil-card .ico {
+    width: 38px; height: 38px; border: 1px solid var(--accent);
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 800; color: var(--accent); font-size: 16px; margin-bottom: 18px;
+  }
+  .perfil-card h4 { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+  .perfil-card p { font-size: 14px; color: var(--text-2); line-height: 1.5; }
+  @media (max-width: 900px) {
+    .perfil-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 500px) {
+    .perfil-grid { grid-template-columns: 1fr; }
+  }
+
+  /* Não importa */
+  .neutro {
+    margin-top: 40px; padding: 28px;
+    border: 1px solid var(--line); background: var(--bg-2);
+    display: grid; grid-template-columns: 200px 1fr; gap: 30px; align-items: center;
+  }
+  .neutro h4 {
+    font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700;
+    line-height: 1.2;
+  }
+  .neutro p { color: var(--text-2); font-size: 15px; line-height: 1.6; }
+  .neutro p strong { color: var(--accent); font-weight: 600; }
+  @media (max-width: 768px) {
+    .neutro { grid-template-columns: 1fr; gap: 14px; }
+  }
+
+  /* Canais */
+  .canais-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+    margin-top: 32px;
+  }
+  .canal {
+    border: 1px solid var(--line); background: var(--bg-2);
+    padding: 28px 24px; position: relative;
+  }
+  .canal .canal-num {
+    font-family: 'Playfair Display', serif; font-size: 14px; font-weight: 700;
+    color: var(--accent); margin-bottom: 14px; letter-spacing: 0.1em;
+  }
+  .canal h4 { font-size: 18px; font-weight: 700; margin-bottom: 10px; }
+  .canal p { font-size: 14px; color: var(--text-2); line-height: 1.55; }
+  .canal .tag {
+    display: inline-block; margin-top: 14px;
+    font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 4px 10px; border: 1px solid var(--line); color: var(--text-3);
+  }
+  .canal .tag.alinhar { color: var(--accent); border-color: rgba(239,79,0,0.4); }
+  @media (max-width: 900px) { .canais-grid { grid-template-columns: 1fr; } }
+
+  /* Cronograma */
+  .timeline { margin-top: 36px; border-top: 1px solid var(--line); }
+  .step {
+    display: grid; grid-template-columns: 180px 1fr; gap: 30px;
+    padding: 26px 0; border-bottom: 1px solid var(--line);
+  }
+  .step .when {
+    font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700;
+    color: var(--accent);
+  }
+  .step .when small { display: block; font-family: 'Inter', sans-serif; font-size: 12px; color: var(--text-3); font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; margin-top: 4px; }
+  .step .what h4 { font-size: 18px; font-weight: 700; margin-bottom: 6px; }
+  .step .what p { color: var(--text-2); font-size: 15px; }
+  .step.dday { background: linear-gradient(90deg, rgba(239,79,0,0.08), transparent 70%); }
+  .step.dday .when { color: var(--accent); font-size: 28px; }
+  @media (max-width: 768px) { .step { grid-template-columns: 1fr; gap: 8px; } }
+
+  /* CTA Footer */
+  .footer-cta {
+    padding: 80px 0; text-align: center;
+    background: linear-gradient(180deg, var(--bg) 0%, #150700 100%);
+  }
+  .footer-cta h3 {
+    font-family: 'Playfair Display', serif; font-size: clamp(28px, 4vw, 42px);
+    font-weight: 900; margin-bottom: 16px;
+  }
+  .footer-cta p { color: var(--text-2); font-size: 17px; max-width: 600px; margin: 0 auto 32px; }
+  .footer-meta {
+    margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--line);
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px;
+    font-size: 13px; color: var(--text-3);
+  }
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<header class="topbar">
+  <div class="container topbar-row">
+    <div class="brand">
+      <div class="brand-mark">C</div>
+      <div class="brand-name">CAPITAL CONCRETO <span>· Recrutamento Comercial</span></div>
+    </div>
+    <div class="small">D-Day 18 · Maio · 2026</div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-tag">Mutirão de Contratação · Operação CAPTO</div>
+    <h1>Construindo o time que vai vender o <em>Mini Contrato Imobiliário</em>.</h1>
+    <p class="hero-sub">
+      Plano de recrutamento da nova célula comercial da Capital Concreto. Três vagas estratégicas para sustentar a operação CAPTO desde a primeira leva — Diretoria de RH (Glaucia) + Diretoria Comercial (Victor Sanson) operando em conjunto.
+    </p>
+
+    <div class="hero-grid">
+      <div class="hero-stat">
+        <div class="small">Total de vagas</div>
+        <div class="num">23</div>
+        <div class="label">3 cargos · 1ª leva</div>
+      </div>
+      <div class="hero-stat">
+        <div class="small">D-Day</div>
+        <div class="num">18.05</div>
+        <div class="label">Entrevista coletiva</div>
+      </div>
+      <div class="hero-stat">
+        <div class="small">Filtro pré-D-Day</div>
+        <div class="num">30→20</div>
+        <div class="label">Consultores selecionados</div>
+      </div>
+      <div class="hero-stat">
+        <div class="small">Cadência seguinte</div>
+        <div class="num">15/mês</div>
+        <div class="label">Após mutirão inicial</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VAGAS -->
+<section id="vagas">
+  <div class="container">
+    <div class="section-head">
+      <div class="small">As três vagas</div>
+      <h2>Quem precisamos contratar.</h2>
+      <p>Estrutura desenhada para suportar o pipeline desde o primeiro dia: vendedores na ponta, coordenadores cobrando time, e RH dedicado para alimentar e filtrar o funil de candidatos.</p>
+    </div>
+
+    <!-- VAGA 1 -->
+    <article class="vaga">
+      <div class="vaga-head">
+        <div class="vaga-num">01</div>
+        <div class="vaga-title">
+          <div class="small">Vaga estratégica · Frente de batalha</div>
+          <h3>Consultor de Investimento Imobiliário</h3>
+          <div class="vaga-vacancies"><strong>20 vagas</strong> · Modelo PJ · Presencial Alphaville</div>
+        </div>
+      </div>
+      <div class="vaga-body">
+        <div class="vaga-block">
+          <h4>O que faz</h4>
+          <ul>
+            <li>Apresenta o Mini Contrato Imobiliário (cota CAPTO) para investidores qualificados</li>
+            <li>Constrói e ativa rede própria de relacionamento como principal canal de venda</li>
+            <li>Atende leads inbound distribuídos pela "roleta" SDR conforme performance</li>
+            <li>Cumpre rotina de daily, treinamento contínuo e atualização de CRM</li>
+            <li>Participa do curso M15-CAPTO (módulos sequenciais durante os primeiros 3 meses)</li>
+          </ul>
+        </div>
+        <div class="vaga-block">
+          <h4>Perfil esperado</h4>
+          <ul>
+            <li>Experiência consolidada em vendas consultivas, de preferência de produto financeiro ou imobiliário</li>
+            <li>Rede de contatos ativa e qualificada — relacionamento como ferramenta principal</li>
+            <li>Dominante, proativo, mente empreendedora, alta disciplina de execução</li>
+            <li>Capacidade de gerar pipeline sem depender exclusivamente de lead recebido</li>
+            <li>Ensino superior completo ou cursando · Disponibilidade integral</li>
+          </ul>
+        </div>
+      </div>
+      <div class="vaga-remun">
+        <div class="remun-cell">
+          <div class="small">Mínimo garantido</div>
+          <div class="v">R$ 2.500</div>
+          <div class="d">Fixo mensal · primeiros meses</div>
+        </div>
+        <div class="remun-cell">
+          <div class="small">Comissão</div>
+          <div class="v">3%</div>
+          <div class="d">Sobre o valor do contrato · pago em 15 meses</div>
+        </div>
+        <div class="remun-cell">
+          <div class="small">Suporte ao crescimento</div>
+          <div class="v">Trilha M15</div>
+          <div class="d">Mentoria + curso modular obrigatório</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- VAGA 2 -->
+    <article class="vaga">
+      <div class="vaga-head">
+        <div class="vaga-num">02</div>
+        <div class="vaga-title">
+          <div class="small">Liderança comercial · Multiplicação</div>
+          <h3>Coordenador Comercial</h3>
+          <div class="vaga-vacancies"><strong>2 vagas</strong> · 1 coordenador para cada 10 consultores</div>
+        </div>
+      </div>
+      <div class="vaga-body">
+        <div class="vaga-block">
+          <h4>O que faz</h4>
+          <ul>
+            <li>Lidera operacionalmente uma sub-célula de até 10 consultores</li>
+            <li>Conduz daily, gestão de pipeline, acompanhamento de meta e reciclagem do time</li>
+            <li>Vende ativamente também (mesma lógica de comissão do consultor)</li>
+            <li>Apoia processos seletivos contínuos (15 novos consultores/mês após o mutirão)</li>
+            <li>Reporta diretamente ao Diretor Comercial Victor Sanson</li>
+          </ul>
+        </div>
+        <div class="vaga-block">
+          <h4>Perfil esperado</h4>
+          <ul>
+            <li>Histórico comprovado de liderança de time comercial — performance + gestão de pessoas</li>
+            <li>Forte mentalidade de cultura, capaz de elevar o nível do time mesmo sob pressão</li>
+            <li>Mesmo perfil comportamental do consultor, adicionado de capacidade de coaching de pares</li>
+            <li>Carteira de relacionamentos própria que permita vender enquanto coordena</li>
+            <li>Disposição para presença diária no escritório · sala comercial separada</li>
+          </ul>
+        </div>
+      </div>
+      <div class="vaga-remun">
+        <div class="remun-cell">
+          <div class="small">Mínimo garantido</div>
+          <div class="v">R$ 5.000</div>
+          <div class="d">Fixo mensal</div>
+        </div>
+        <div class="remun-cell">
+          <div class="small">Comissão direta</div>
+          <div class="v">3%</div>
+          <div class="d">Igual ao consultor · sobre vendas próprias</div>
+        </div>
+        <div class="remun-cell">
+          <div class="small">Override do time</div>
+          <div class="v">+10%</div>
+          <div class="d">Sobre comissão dos consultores liderados (≈ 0,3% adicional sobre VGV — total efetivo 3,3%)</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- VAGA 3 -->
+    <article class="vaga">
+      <div class="vaga-head">
+        <div class="vaga-num">03</div>
+        <div class="vaga-title">
+          <div class="small">Suporte de gestão · Funil de talentos</div>
+          <h3>Auxiliar de RH (SDR de Recrutamento)</h3>
+          <div class="vaga-vacancies"><strong>1 vaga</strong> · Apoio direto à Diretoria de RH (Glaucia)</div>
+        </div>
+      </div>
+      <div class="vaga-body">
+        <div class="vaga-block">
+          <h4>O que faz</h4>
+          <ul>
+            <li>Faz a triagem inicial dos candidatos vindos das campanhas de tráfego e plataformas</li>
+            <li>Conduz entrevistas de pré-qualificação por telefone/vídeo</li>
+            <li>Aplica testes comportamentais (NEO/DISC) e organiza relatórios</li>
+            <li>Agenda entrevistas finais com a Diretoria de RH e Diretoria Comercial</li>
+            <li>Mantém o pipeline de candidatos atualizado e segmentado por fase</li>
+          </ul>
+        </div>
+        <div class="vaga-block">
+          <h4>Perfil esperado</h4>
+          <ul>
+            <li>Formação em Psicologia, RH ou áreas correlatas (cursando aceito)</li>
+            <li>Experiência prévia em recrutamento de alto volume é diferencial</li>
+            <li>Organização milimétrica · capacidade de operar planilhas e CRM de candidatos</li>
+            <li>Comunicação clara, postura profissional, perfil de filtro — sabe dizer não rapidamente</li>
+            <li>Alta velocidade de execução — esse cargo é o gargalo do funil de contratação</li>
+          </ul>
+        </div>
+      </div>
+      <div class="vaga-remun">
+        <div class="remun-cell">
+          <div class="small">Modelo</div>
+          <div class="v">A definir</div>
+          <div class="d">CLT ou PJ · alinhado com Glaucia</div>
+        </div>
+        <div class="remun-cell">
+          <div class="small">Reporte</div>
+          <div class="v">Diretoria RH</div>
+          <div class="d">Glaucia · operação compartilhada com Patrick</div>
+        </div>
+        <div class="remun-cell">
+          <div class="small">Carga</div>
+          <div class="v">Integral</div>
+          <div class="d">Presencial sede Capital Concreto</div>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- PERFIL COMPORTAMENTAL -->
+<section id="perfil">
+  <div class="container">
+    <div class="section-head">
+      <div class="small">Base comportamental dos consultores</div>
+      <h2>O que vai definir quem fica.</h2>
+      <p>Currículo conta — mas a base comportamental é o filtro principal. O modelo CAPTO exige um perfil específico, que está acima de cargo anterior, idade ou formação.</p>
+    </div>
+
+    <div class="perfil-grid">
+      <div class="perfil-card">
+        <div class="ico">D</div>
+        <h4>Dominância alta</h4>
+        <p>Toma decisão rápido, não foge de cobrança e gosta de ser cobrado por meta. Não é o perfil "afetivo passivo".</p>
+      </div>
+      <div class="perfil-card">
+        <div class="ico">P</div>
+        <h4>Proatividade</h4>
+        <p>Não espera ser chamado. Identifica oportunidade, faz o primeiro contato, busca a próxima conversa antes que o pipeline esfrie.</p>
+      </div>
+      <div class="perfil-card">
+        <div class="ico">E</div>
+        <h4>Mentalidade empreendedora</h4>
+        <p>Pensa como dono do próprio resultado. Investe em aprender. Cria canais próprios de aquisição além da empresa.</p>
+      </div>
+      <div class="perfil-card">
+        <div class="ico">D</div>
+        <h4>Disciplina</h4>
+        <p>Cumpre rotina sem ser empurrado. Daily, CRM, follow-up, reciclagem — execução consistente todo dia.</p>
+      </div>
+    </div>
+
+    <div class="neutro">
+      <div>
+        <h4>Não filtramos por idade, gênero ou origem.</h4>
+      </div>
+      <p>O que importa é a <strong>base comportamental</strong>. Já vimos vendedor de 25 e de 55 performando no topo do ranking — desde que tenha rede de relacionamento ativa, experiência prévia em vendas e o perfil acima. Diversidade de bagagem é vantagem competitiva, não obstáculo.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CANAIS DE AQUISIÇÃO -->
+<section id="canais">
+  <div class="container">
+    <div class="section-head">
+      <div class="small">Como vamos encontrar essas pessoas</div>
+      <h2>Canais de aquisição de candidatos.</h2>
+      <p>Estrutura paralela ao funil comercial: várias frentes simultâneas alimentando o pipeline de talentos. Detalhamento operacional será coordenado com Guilherme (Marketing) na segunda-feira.</p>
+    </div>
+
+    <div class="canais-grid">
+      <div class="canal">
+        <div class="canal-num">CANAL · 01</div>
+        <h4>Página de captura + VSL da vaga</h4>
+        <p>Página dedicada inspirada na VSL do Marcelo (formato CAPTO), comunicando a oportunidade real do consultor. Coordenar produção com Guilherme (Diretor de Marketing).</p>
+        <span class="tag alinhar">Alinhar segunda · com Guilherme</span>
+      </div>
+      <div class="canal">
+        <div class="canal-num">CANAL · 02</div>
+        <h4>Tráfego pago + criativos</h4>
+        <p>Anúncios em Meta e LinkedIn rodando a vaga com criativos próprios (vídeo, imagem). Volume calibrado para encher o auditório do D-Day.</p>
+        <span class="tag alinhar">Briefing criativos com MKT</span>
+      </div>
+      <div class="canal">
+        <div class="canal-num">CANAL · 03</div>
+        <h4>Plataformas de currículos</h4>
+        <p>Catho, LinkedIn Jobs, InfoJobs e similares. Volume orgânico complementar e cobertura de candidatos passivos qualificados.</p>
+        <span class="tag">Operação RH</span>
+      </div>
+      <div class="canal">
+        <div class="canal-num">CANAL · 04</div>
+        <h4>Vídeo de recrutamento Cariane</h4>
+        <p>Conteúdo gravado pelo Renato Cariane (parceiro estratégico) abrindo a vaga para a base dele. Potencial de inscrição massivo.</p>
+        <span class="tag">Coordenar pauta</span>
+      </div>
+      <div class="canal">
+        <div class="canal-num">CANAL · 05</div>
+        <h4>Indicação interna</h4>
+        <p>Time atual da Capital + rede do Victor Sanson. Indicações com bônus, qualidade alta historicamente.</p>
+        <span class="tag">Comunicação interna</span>
+      </div>
+      <div class="canal">
+        <div class="canal-num">CANAL · 06</div>
+        <h4>Mais canais a definir</h4>
+        <p>Headhunter pontual, parcerias com escolas/cursos de mercado financeiro, ativação de comunidades. Definir conforme conversão dos canais primários.</p>
+        <span class="tag">Backup / escala</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CRONOGRAMA -->
+<section id="cronograma">
+  <div class="container">
+    <div class="section-head">
+      <div class="small">Cronograma 18 dias</div>
+      <h2>Rota até o D-Day.</h2>
+      <p>Janela apertada. Cada bloco do cronograma é gargalo do próximo. Começamos hoje com a contratação da Auxiliar de RH em paralelo à montagem dos canais.</p>
+    </div>
+
+    <div class="timeline">
+      <div class="step">
+        <div class="when">Hoje · 30/04 <small>Quarta</small></div>
+        <div class="what">
+          <h4>Aprovação interna do plano</h4>
+          <p>Reunião Patrick × Glaucia para alinhamento das 3 vagas, fluxo de filtro e sequência de ativação. Início da contratação da Auxiliar de RH.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="when">Seg · 05/05 <small>Marketing</small></div>
+        <div class="what">
+          <h4>Briefing com Guilherme (Marketing)</h4>
+          <p>Página de captura + VSL da vaga + criativos pagos. Definição de orçamento, prazos de entrega e plataformas de mídia.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="when">06—09/05 <small>Captação</small></div>
+        <div class="what">
+          <h4>Campanha no ar · Coleta de candidatos</h4>
+          <p>Tráfego rodando, plataformas ativas, vídeo Cariane veiculado. Auxiliar de RH já operando triagem em tempo real.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="when">10—15/05 <small>Filtro</small></div>
+        <div class="what">
+          <h4>Pré-seletiva e testes</h4>
+          <p>Entrevistas curtas, aplicação de teste comportamental, validação de rede de contatos. Lista das 30 finalistas montada.</p>
+        </div>
+      </div>
+      <div class="step dday">
+        <div class="when">18/05 <small>D-Day</small></div>
+        <div class="what">
+          <h4>Entrevista coletiva · Auditório Capital</h4>
+          <p>30 finalistas no auditório · Cariane + Marcelo + Patrick + Victor no palco · 20 selecionados ao final do dia.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="when">19—21/05 <small>Onboard</small></div>
+        <div class="what">
+          <h4>Treinamento intensivo · 72h</h4>
+          <p>Playbook completo, simuladores, M15-CAPTO módulo 1, simulação de pitch. Patrick presencial a semana toda.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="when">22/05 +<small>Operação no ar</small></div>
+        <div class="what">
+          <h4>Primeira daily · 8h da manhã</h4>
+          <p>Operação CAPTO formalmente em produção. Cadência seguinte: 15 novas contratações por mês com filtro contínuo.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FOOTER -->
+<section class="footer-cta">
+  <div class="container">
+    <h3>Construindo o time que vai escalar a CAPTO.</h3>
+    <p>Documento operacional para alinhamento entre Diretoria de RH (Glaucia), Diretoria Comercial (Victor Sanson) e Growth (Patrick Suyti). Próximo passo: ativar Canal 01 e iniciar a contratação da Auxiliar de RH ainda essa semana.</p>
+
+    <div class="footer-meta container">
+      <div>CAPITAL CONCRETO · Operação CAPTO</div>
+      <div>Plano de Recrutamento · v1 · 30.04.2026</div>
+      <div>Atualizado por Patrick Suyti</div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
